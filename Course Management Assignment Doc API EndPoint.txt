@@ -1,0 +1,63 @@
+Add Course:
+URL:http://localhost:8080/course/add
+Body:
+ {
+  "courseName": "Swift UI"
+ }
+
+
+Add Batch Offerings:
+URL:http://localhost:8080/api/teachers/offerings
+{
+  "courseId": 3,
+  "offeringName": "Saturday Batch",
+  "teacherId": "teacher-99"
+}
+
+
+Add Sessions:
+URL:http://localhost:8080/api/teachers/offerings/3/sessions
+[
+  {
+    "startTime": "2026-06-06T18:00:00Z",
+    "endTime": "2026-06-06T19:00:00Z"
+  },
+  {
+    "startTime": "2026-06-13T18:00:00Z",
+    "endTime": "2026-06-13T19:00:00Z"
+  },
+  {
+    "startTime": "2026-06-20T18:00:00Z",
+    "endTime": "2026-06-20T19:00:00Z"
+  }
+]
+
+
+
+Add Parent:
+URL: http://localhost:8080/parent/add
+{
+  "parentName": "Amit Sharma",
+  "timezone": "India"
+}
+
+
+Booking:
+URL: http://localhost:8080/api/parents/book
+{
+  "parentId": 1,
+  "offeringId": 4
+}
+
+
+
+Get Parent :
+URL:http://localhost:8080/api/parents/offerings?parentId=1
+
+
+
+Get Booking:
+URL: http://localhost:8080/api/parents/1/bookings
+
+
+
